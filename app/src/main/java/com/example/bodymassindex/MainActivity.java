@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         res.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                  height.setText("");
                  weight.setText("");
                  text.setText("");
