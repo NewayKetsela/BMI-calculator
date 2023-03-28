@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -26,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:enabled="false"
                 android:inputType="numberDecimal"
+                android:textColor="#AF5D5D"
                 android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 

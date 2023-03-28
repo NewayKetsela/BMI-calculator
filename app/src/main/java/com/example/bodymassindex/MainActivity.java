@@ -30,7 +30,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (height.getText().toString().isEmpty() || weight.getText().toString().isEmpty()) {
-
+                    if (height.getText().toString().isEmpty()) {
+                        height.setError("Please enter a value");
+                    }
+                    if (weight.getText().toString().isEmpty()) {
+                        weight.setError("Please enter a value");
+                    }
                     Toast.makeText(MainActivity.this, "please fill the above value! ", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -51,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                  height.setText("");
                  weight.setText("");
                  text.setText("");
+                 height.setError(null);
+                weight.setError(null);
             }
         });
 
