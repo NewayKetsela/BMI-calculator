@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BodyMassIndex</string>
+    <string name="txt_result_hint">BMI:</string>
+
+</resources>
