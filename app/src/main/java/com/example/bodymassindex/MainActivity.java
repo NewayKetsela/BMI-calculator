@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -28,10 +29,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                double h=Double.parseDouble(height.getText().toString());
-                double w=Double.parseDouble(weight.getText().toString());
-                double bmi = w/(h*h);
-                text.setText(Double.toString(bmi)+" ");
+                if (height.getText().toString().isEmpty() || weight.getText().toString().isEmpty()) {
+
+                    Toast.makeText(MainActivity.this, "please fill the above value! ", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    double h = Double.parseDouble(height.getText().toString());
+                    double w = Double.parseDouble(weight.getText().toString());
+                    double bmi = w / (h * h);
+                    bmi=bmi*10000;
+                    text.setText(Double.toString(bmi) + " ");
+                }
+
 
             }
         });
